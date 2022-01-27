@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>MellowoodMedical.MyTest.Migrator</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>MellowoodMedical.MyTest.Migrator</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json;log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.Castle.Log4Net" Version="4.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MellowoodMedical.MyTest.Core\MellowoodMedical.MyTest.Core.csproj" />
+    <ProjectReference Include="..\MellowoodMedical.MyTest.EntityFrameworkCore\MellowoodMedical.MyTest.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
